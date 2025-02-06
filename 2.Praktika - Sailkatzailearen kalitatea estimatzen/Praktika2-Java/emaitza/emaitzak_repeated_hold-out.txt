@@ -1,0 +1,15 @@
+Exekuzio data: Mon Feb 03 10:54:37 CET 2025
+
+Exekuzio argumentuak: 
+1. data/adult.train.arff
+2. emaitza
+
+=== Average Metrics over 10 runs ===
+Avg Precision (Minor Class): 0,714
+Avg Recall (Minor Class): 0,518
+Avg F-Score (Minor Class): 0,601
+
+=== Weighted Average Metrics ===
+Avg Weighted Precision: 0,822
+Avg Weighted Recall: 0,832
+Avg Weighted F-Score: 0,822

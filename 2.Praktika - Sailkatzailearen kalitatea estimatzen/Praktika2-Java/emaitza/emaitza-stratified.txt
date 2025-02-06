@@ -1,0 +1,12 @@
+Fecha de ejecución: 2025-02-06 15:04:49
+Archivos usados:
+  - Train: data/stratified/train.arff
+  - Dev: data/stratified/dev.arff
+
+Matriz de confusión:
+=== Confusion Matrix ===
+    a    b   <-- classified as
+ 2310  177 |    a =  <=50K
+  354  416 |    b =  >50K
+
+Accuracy: 83,70%

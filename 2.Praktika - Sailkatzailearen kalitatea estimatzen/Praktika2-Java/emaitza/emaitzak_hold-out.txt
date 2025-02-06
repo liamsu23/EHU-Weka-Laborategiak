@@ -1,0 +1,26 @@
+Exekuzio data: Thu Feb 06 15:06:05 CET 2025
+
+Exekuzio argumentuak: 
+1. data/adult.train.arff
+2. emaitza
+
+Klase Minoritarioa: ( >50K)
+Precision: 0,716
+Recall: 0,529
+F-Score: 0,608
+
+=== Weighted Average Metrics ===
+Weighted Precision: 0,827
+Weighted Recall: 0,836
+Weighted F-Score: 0,827
+
+=== Confusion Matrix ===
+ <=50K  >50K <-- classified as
+ 15245.0 1084.0 |      <=50K
+ 2433.0 2728.0 |      >50K
+------------PRUEBA------------
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 15245  1084 |     a =  <=50K
+  2433  2728 |     b =  >50K
