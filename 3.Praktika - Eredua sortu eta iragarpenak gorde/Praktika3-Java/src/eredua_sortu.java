@@ -1,8 +1,13 @@
 import weka.classifiers.Classifier;
+import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.core.Instances;
 import weka.core.SerializationHelper;
 import weka.core.converters.ConverterUtils.DataSource;
+
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.Date;
 
 public class eredua_sortu {
 
@@ -33,7 +38,24 @@ public class eredua_sortu {
             SerializationHelper.write(modelPath, classifier);
             System.out.println("Modelo guardado en: " + modelPath);
 
-            //TODO
+            //Ebaluazioa egin
+            Evaluation eval = new Evaluation(data);
+            eval.evaluateModel(classifier,data);
+
+            // Emaitzak gorde
+            try(PrintWriter writer = new PrintWriter(new FileWriter(outputPath))){
+                Date gaur = new Date();
+                writer.println("Data: " +gaur + "\n");
+                for (int i=0; i<args.length; i++){
+                    writer.println(i + ". atributua: " + args[i]);
+                }
+                writer.println("\n" + eval.toMatrixString());
+
+            }
+            catch (Exception e){
+                e.printStackTrace();
+                System.out.println("Errorea emaitzak gordetzean.");
+            }
 
         }
         catch(Exception e){

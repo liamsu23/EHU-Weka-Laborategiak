@@ -64,7 +64,7 @@ public class repeated_hold_out {
                 classifier.buildClassifier(trainData);
 
                 // 4.Urratsa: Sailkatzailea probatu
-                Evaluation evaluation = new Evaluation(trainData);
+                    Evaluation evaluation = new Evaluation(trainData);
                 evaluation.evaluateModel(classifier, testData);
 
                 // 5.Urratsa: Emaitzak gorde
