@@ -1,0 +1,13 @@
+Data: Fri Feb 07 12:39:42 CET 2025
+
+0. atributua: data/data_2/data_supervised.arff
+1. atributua: model/NB.model
+2. atributua: emaitza/KalitatearenEstimazioa2.txt
+
+=== Confusion Matrix ===
+
+   a   b   c   <-- classified as
+ 726  41   0 |   a =  <=50K
+ 131 127   0 |   b =  >50K
+   0   0   0 |   c = suspicious
+
