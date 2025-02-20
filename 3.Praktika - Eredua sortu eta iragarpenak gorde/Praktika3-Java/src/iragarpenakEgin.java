@@ -5,7 +5,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class iragarpenakEgin {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
         if (args.length < 3){
             System.out.println("Argumentuak ondo sartu.");
             return;

@@ -41,24 +41,6 @@ public class k_fCV {
             String outputPath = args[1] + "/emaitzak_k-fCV.txt"; // Ruta del segundo argumento + nombre del archivo
             try (BufferedWriter buffer = new BufferedWriter(new FileWriter(outputPath))) {
 
-                // -Obtener y escribir la matriz de confusión
-                /*double[][] confusionMatrix = eval.confusionMatrix();
-                String[] classNames = new String[data.numClasses()];
-                for (int i = 0; i < data.numClasses(); i++) {
-                    classNames[i] = data.classAttribute().value(i);
-                }
-                buffer.write("\n=== Confusion Matrix ===\n");
-                buffer.write("     ");
-                for (String className : classNames) {
-                    buffer.write(className + " ");
-                }
-                buffer.write("<-- classified as\n");
-                for (int i = 0; i < confusionMatrix.length; i++) {
-                    for (int j = 0; j < confusionMatrix[i].length; j++) {
-                        buffer.write(" " + confusionMatrix[i][j]);
-                    }
-                    buffer.write(" |     " + classNames[i] + "\n");
-                }*/
                 buffer.write(eval.toMatrixString());
 
                 // -Precision metrika klasearen balio bakoitzeko eta weighted avg

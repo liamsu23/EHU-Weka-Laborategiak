@@ -9,14 +9,14 @@ public class Praktika1 {
             System.out.println("Por favor, especifica la ruta al archivo .arff como argumento.");
             return;
         }
-
+        // -Argumentuetatik .arff artxiboa kargatu
+        String filePath = args[0];
         try {
-            // -Argumentuetatik .arff artxiboa kargatu
-            String filePath = args[0];
+            // 1. Datuak kargatu
             DataSource source = new DataSource(filePath);
             Instances data = source.getDataSet();
 
-            // Establecer la clase
+            // 2. Klasea ezarri
             if (data.classIndex() == -1) {
                 data.setClassIndex(data.numAttributes() - 1);
             }

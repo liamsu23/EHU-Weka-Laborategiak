@@ -58,15 +58,6 @@ public class stratified_hold_out {
             System.out.println("Entrenamiento: " + trainFilePath);
             System.out.println("Prueba: " + testFilePath);
 
-            // 2. Entrenar el clasificador
-            Classifier classifier = new NaiveBayes();
-            classifier.buildClassifier(trainData);
-
-            // 3. Evaluar el modelo
-            Evaluation eval = new Evaluation(trainData);
-            eval.evaluateModel(classifier, testData);
-
-
         }
         catch (Exception e) {
             e.printStackTrace();

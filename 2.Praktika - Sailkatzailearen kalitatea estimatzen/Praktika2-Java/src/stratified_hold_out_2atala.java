@@ -60,7 +60,9 @@ public class stratified_hold_out_2atala {
 
     // Método para guardar la evaluación en un archivo de texto
     private static void saveEvaluationResults(String outputPath, String trainPath, String devPath, Evaluation eval) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(outputPath))) {
+        try  {
+            PrintWriter writer = new PrintWriter(new FileWriter(outputPath));
+
             // Obtener la fecha y hora actual
             String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 
